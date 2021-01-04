@@ -8,11 +8,12 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-import 'signature_pad'
 
 let jQuery = require("jquery");
 // import jQuery from "jquery";
 global.$ = jQuery;
+import 'signature_pad';
+import 'bootstrap';
 import SignaturePad from "signature_pad";
 
 // Uncomment to copy all static images under ../images to the output folder and reference

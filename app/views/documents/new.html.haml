@@ -1,13 +1,21 @@
+.term-body
+  %h1.text-center.mt-5 Terms and Conditions
+  %p Lorem ipsum dolor sit amet, magna intellegam ius an, has affert nostrum no. Errem deterruisset sed te, vis et erant aperiam. Usu no porro fugit, quo mutat iudico hendrerit et. Mundi equidem scripserit usu cu, malis sapientem molestiae cum in.
+  %p An vim alia civibus. Cum sumo vero inermis an, qui movet errem consetetur et, prima admodum moderatius in nam. Et quod nullam sed, per partem noster blandit et. Eu cum vidit apeirian, error decore tritani no duo. Sea atqui novum causae eu, aeque ubique epicuri in eam, porro doctus cum in. Percipitur deterruisset mel an, sed ut munere inermis accusamus.
+  %p Sea vidit adolescens et, nonumy altera omittam mea te. Eum ad intellegam sadipscing, mel eu malorum perpetua. Noster definiebas et vim, eu nec esse labore labitur, sale movet argumentum pro id. Possit sadipscing mel cu. Vel malorum inimicus mediocrem et, mel abhorreant dissentiet te. Vel viris placerat dignissim ad, ne duo melius denique definitiones, tota probo ancillae in mei. Cu sed prompta nostrum efficiendi, has recteque patrioque iracundia ut, utinam appareat recusabo pri id.
+  %p Cum an vidisse indoctum abhorreant, legere appetere maluisset no per, ea ius movet discere. Eos ea habeo iracundia. Ea eos exerci intellegebat, scripta diceret ei nam. Ut nam alii esse abhorreant, an iuvaret mandamus dissentiet has, placerat oportere vix eu.
+  %p Agam definitionem eos cu, has cu zril malorum cotidieque. Quando principes ad pro, simul graeco eum at. Stet tempor necessitatibus ex mei, sea ei odio alii mnesarchum, eam labore doctus at. Qui utroque incorrupte complectitur ex, invenire electram intellegam ei quo, ceteros adipisci nam id. Ne eum veri audiam scaevola.
+  = form_for @document do |f|
+    = f.hidden_field :signature, as: :hidden, class: 'signature_pad_input'
+    .signature_pad.text-center
+      .signature_pad_body
+        %canvas
+      .signature_pad_footer
+        .text-muted Sign above
+        %button.btn.btn-default.signature_pad_clear{:type => "button"} Clear
+        = f.submit 'Save', class: 'btn btn-success signature_pad_save'
 .text-left
   - @documents.each do |doc|
     = image_tag(doc.signature)
     = doc.signed_on
-= form_for @document do |f|
-  = f.hidden_field :signature, as: :hidden, class: 'signature_pad_input'
-  .signature_pad.text-center
-    .signature_pad_body
-      %canvas
-    .signature_pad_footer
-      .text-muted Sign above
-      %button.btn.btn-default.signature_pad_clear{:type => "button"} Clear
-      = f.submit 'Save', class: 'btn btn-success signature_pad_save'
+

@@ -13,10 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
 .signature_pad {
-    width: 700px;
-    height: 400px;
-    margin: 0 auto;
+  width: 400px;
+  height: 300px;
+  margin: 80px auto;
 }
 
 .signature_pad_body canvas {
@@ -24,4 +25,9 @@
     height: 100%;
     border: dotted #444;
     background: #CCCCCC;
+}
+
+
+.term-body {
+  margin: 100px;
 }
